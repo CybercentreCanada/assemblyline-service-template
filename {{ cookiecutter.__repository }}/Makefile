@@ -20,7 +20,7 @@ build:
 	docker build \
 		--pull \
 		--build-arg version=$(VERSION) \
-		--build-arg branch=$(TAG) \
+		--build-arg branch=stable \
 		-t $(REGISTRY)$(ORG){{ cookiecutter.__repository }}:$(TAG)\
 		-f ./Dockerfile \
 		.
