@@ -1,9 +1,6 @@
-# Name of the service
-name: Sample
-# Version of the service
-version: 4.5.0.dev0
-# Description of the service
-description: ALv4 Sample service from the documentation
+name: {{ cookiecutter.__class_name }}
+version: $SERVICE_TAG
+description: {{ cookiecutter.short_description }}
 
 # Regex defining the types of files the service accepts and rejects
 accepts: .*
@@ -11,9 +8,9 @@ rejects: empty
 
 # At which stage the service should run (one of FILTER, EXTRACT, CORE, SECONDARY, POST, REVIEW)
 # NOTE: Stages are executed in the order defined in the list
-stage: CORE
+stage: {{ cookiecutter.stage }}
 # Which category the service is part of (one of Antivirus, Dynamic Analysis, External, Extraction, Filtering, Internet Connected, Networking, Static Analysis)
-category: Static Analysis
+category: {{ cookiecutter.category }}
 
 # Does the service require access to the file to perform its task
 # If set to false, the service will only have access to the file metadata (e.g. Hashes, size, type, ...)
@@ -25,17 +22,21 @@ timeout: 60
 enabled: true
 
 # Service heuristic blocks: List of heuristic objects that define the different heuristics used in the service
-heuristics:
-  - description: This is a demo heuristic
-    filetype: "*"
-    heur_id: 1
-    name: Demo
-    score: 100
+# heuristics:
+#   - description: This is a demo heuristic
+#     filetype: "*"
+#     heur_id: 1
+#     name: Demo
+#     score: 100
 
 # Docker configuration block which defines:
 #  - the name of the docker container that will be created
 #  - CPU and ram allocation by the container
+{% set org = cookiecutter.org_name_short -%}
+{% if org -%}
+  {% set org = org ~ "/" -%}
+{% endif -%}
 docker_config:
-  image: ${REGISTRY}testing/assemblyline-service-sample:latest
+  image: ${REGISTRY}{{ org }}{{ cookiecutter.__repository }}:$SERVICE_TAG
   cpu_cores: 1.0
   ram_mb: 1024
