@@ -25,7 +25,7 @@ Assemblyline services use the following tag definitions:
 
 ## Running this service
 
-This is an Assemblyline service. It is desinged to run as part of the Assemblyline framework.
+This is an Assemblyline service. It is designed to run as part of the Assemblyline framework.
 
 If you would like to test this service locally, you can run the Docker image directly from the a shell:
 
@@ -44,28 +44,28 @@ General Assemblyline documentation can be found at: https://cybercentrecanada.gi
 
 {% if cookiecutter.short_description_fr != "" -%}
 
-# {{ cookiecutter.__class_name }} Service
+# Service {{ cookiecutter.__class_name }}
 
 {{ cookiecutter.short_description_fr }}
 
-## Variantes et balises d'image
+## Variantes et étiquettes d'image
 
-Les services Assemblyline sont construits à partir de l'image de base [Assemblyline serivce](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
-qui est basé sur Debian 11 avec Python 3.11.
+Les services d'Assemblyline sont construits à partir de l'image de base [Assemblyline service](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
+qui est basée sur Debian 11 avec Python 3.11.
 
-Les services Assemblyline utilisent les définitions de balises suivantes:
+Les services d'Assemblyline utilisent les définitions d'étiquettes suivantes:
 
-| **Type d'étiquette** | **Description**                                                                                                |   **Exemple de balise**    |
+| **Type d'étiquette** | **Description**                                                                                                |  **Exemple d'étiquette**   |
 | :------------------: | :------------------------------------------------------------------------------------------------------------- | :------------------------: |
 |   dernière version   | La version la plus récente (peut être instable).                                                               |          `latest`          |
 |      build_type      | Type de construction utilisé. `dev` est la dernière version instable. `stable` est la dernière version stable. |     `stable` ou `dev`      |
-|        série         | Détails de construction complets, y compris la version et le type de build: `version.buildType`.               | `4.1.0stable`, `4.5.1dev3` |
+|        série         | Détails de construction complets, comprenant la version et le type de build: `version.buildType`.              | `4.1.0stable`, `4.5.1dev3` |
 
 ## Exécution de ce service
 
-Il s'agit d'un service Assemblyline. Il est desinged pour fonctionner dans le cadre de la chaîne de montage.
+Il s'agit d'un service d'Assemblyline. Il est optimisé pour fonctionner dans le cadre d'un déploiement d'Assemblyline.
 
-Si vous souhaitez tester ce service localement, vous pouvez exécuter l'image Docker directement à partir de l'un shell:
+Si vous souhaitez tester ce service localement, vous pouvez exécuter l'image Docker directement à partir d'un terminal:
 
     docker run \
         --name {{ cookiecutter.__class_name }} \
@@ -73,11 +73,11 @@ Si vous souhaitez tester ce service localement, vous pouvez exécuter l'image Do
         --network=host \
         {{ cookiecutter.org_name_short }}/{{ cookiecutter.__repository }}
 
-Pour ajouter ce service à votre déploiement Assemblyline, suivez ceci
-[guide](https://cybercentrecanada.github.io/assemblyline4_docs/developer_manual/services/run_your_service/#add-the-container-to-your-deployment).
+Pour ajouter ce service à votre déploiement d'Assemblyline, suivez ceci
+[guide](https://cybercentrecanada.github.io/assemblyline4_docs/fr/developer_manual/services/run_your_service/#add-the-container-to-your-deployment).
 
 ## Documentation
 
-La documentation générale sur l'Assemblyline peut être consultée à l'adresse suivante: https://cybercentrecanada.github.io/assemblyline4_docs/
+La documentation générale sur Assemblyline peut être consultée à l'adresse suivante: https://cybercentrecanada.github.io/assemblyline4_docs/
 
 {% endif -%}
