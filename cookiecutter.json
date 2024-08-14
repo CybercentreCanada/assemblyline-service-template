@@ -5,6 +5,7 @@
   "__pkg_name": "{{ cookiecutter.service_name | replace('-', '_') }}",
   "__class_name": "{{ cookiecutter.__pkg_name | replace ('_', ' ') | title | replace(' ', '') }}",
   "short_description": "This Assemblyline service is amazing and does amazing things.",
+  "short_description_fr": "",
   "stage": ["FILTER", "EXTRACT", "CORE", "SECONDARY", "POST", "REVIEW"],
   "category": [
     "Antivirus",
@@ -22,14 +23,15 @@
   "__prompts__": {
     "service_name": "Name of this service",
     "short_description": "Short one or two line description of what the service does.",
+    "short_description_fr": "[FR] Short one or two line description of what the service does in French, if required.",
     "stage": {
       "__prompt__": "At which stage should the service run? (stages are executed in the order shown)"
     },
     "category": {
       "__prompt__": "Which category the service is part of?"
     },
-    "org_name_full": "Full organization name",
-    "org_name_short": "Abbreviated organization name",
+    "org_name_full": "Full organization name (github)",
+    "org_name_short": "Short organization name (dockerhub)",
     "license": {
       "__prompt__": "Which license would you like to use?",
       "mit": "MIT",
