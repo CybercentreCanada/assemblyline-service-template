@@ -12,7 +12,7 @@
 
 ## Image variants and tags
 
-Assemblyline services are built from the [Assemblyline serivce base image](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
+Assemblyline services are built from the [Assemblyline service base image](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
 which is based on Debian 11 with Python 3.11.
 
 Assemblyline services use the following tag definitions:
