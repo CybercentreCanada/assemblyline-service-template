@@ -3,7 +3,7 @@
 [![Static Badge](https://img.shields.io/badge/github-assemblyline-blue?logo=github)](https://github.com/CybercentreCanada/assemblyline)
 [![Static Badge](https://img.shields.io/badge/github-{{cookiecutter.__repository | replace('-', '\_') }}-blue?logo=github)](https://github.com/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})
 {% if cookiecutter.license != "none" -%}
-[![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE.md)
+[![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE)
 {% endif -%}
 
 # {{ cookiecutter.__class_name }} Service
@@ -21,7 +21,7 @@ Assemblyline services use the following tag definitions:
 | :----------: | :----------------------------------------------------------------------------------------------- | :------------------------: |
 |    latest    | The most recent build (can be unstable).                                                         |          `latest`          |
 |  build_type  | The type of build used. `dev` is the latest unstable build. `stable` is the latest stable build. |     `stable` or `dev`      |
-|    series    | Complete build details, including version and build type: `version.buildType`.                   | `4.1.0stable`, `4.5.1dev3` |
+|    series    | Complete build details, including version and build type: `version.buildType`.                   | `4.1.0.stable`, `4.5.1.dev3` |
 
 ## Running this service
 
@@ -59,7 +59,7 @@ Les services d'Assemblyline utilisent les définitions d'étiquettes suivantes:
 | :------------------: | :------------------------------------------------------------------------------------------------------------- | :------------------------: |
 |   dernière version   | La version la plus récente (peut être instable).                                                               |          `latest`          |
 |      build_type      | Type de construction utilisé. `dev` est la dernière version instable. `stable` est la dernière version stable. |     `stable` ou `dev`      |
-|        série         | Détails de construction complets, comprenant la version et le type de build: `version.buildType`.              | `4.1.0stable`, `4.5.1dev3` |
+|        série         | Détails de construction complets, comprenant la version et le type de build: `version.buildType`.              | `4.1.0.stable`, `4.5.1.dev3` |
 
 ## Exécution de ce service
 
