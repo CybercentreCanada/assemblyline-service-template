@@ -1,2 +1,2 @@
-cookiecutter = "^2.6.0"
-cruft = "^2.15.0"
+cookiecutter>=2.6.0,<3.0
+cruft>=2.15.0,<3.0
