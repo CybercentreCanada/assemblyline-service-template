@@ -3,7 +3,7 @@
 [![Static Badge](https://img.shields.io/badge/github-assemblyline-blue?logo=github)](https://github.com/CybercentreCanada/assemblyline)
 [![Static Badge](https://img.shields.io/badge/github-{{cookiecutter.__repository | replace('-', '\_') }}-blue?logo=github)](https://github.com/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})
 {% if cookiecutter.license != "none" -%}
-[![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE.md)
+[![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE)
 {% endif -%}
 
 # {{ cookiecutter.__class_name }} Service
