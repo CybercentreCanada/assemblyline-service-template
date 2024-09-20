@@ -2,6 +2,7 @@
 [![](https://img.shields.io/discord/908084610158714900)](https://discord.gg/GUAy9wErNu)
 [![Static Badge](https://img.shields.io/badge/github-assemblyline-blue?logo=github)](https://github.com/CybercentreCanada/assemblyline)
 [![Static Badge](https://img.shields.io/badge/github-{{cookiecutter.__repository | replace('-', '\_') }}-blue?logo=github)](https://github.com/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})
+[![GitHub Issues or Pull Requests by label](https://img.shields.io/github/issues/CybercentreCanada/assemblyline/service-{{ cookiecutter.service_name }})](https://github.com/CybercentreCanada/assemblyline/issues?q=is:issue+is:open+label:service-{{ cookiecutter.service_name }})
 {% if cookiecutter.license != "none" -%}
 [![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE)
 {% endif -%}
