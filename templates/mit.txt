@@ -1,11 +1,15 @@
 MIT License
 
-Copyright (c) {% now 'utc', '%Y' %} Crown Copyright, Government of Canada
+Copyright (c) {% now 'utc', '%Y' %} {% if cookiecutter.org_name_full == "CybercentreCanada" -%}
+Crown Copyright, Government of Canada
 (Canadian Centre for Cyber Security / Communications Security Establishment)
 
 Copyright title to all 3rd party software distributed with Assemblyline (AL)
 is held by the respective copyright holders as noted in those files. Users
 are asked to read the 3rd Party Licenses referenced with those assets.
+{%- else -%}
+{{ cookiecutter.org_name_full }}
+{%- endif %}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
