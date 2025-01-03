@@ -12,7 +12,7 @@
             "cwd": "${workspaceFolder}",
             "args": [
                 "-d",
-                "{{ cookiecutter.__pkg_name }}.{{ cookiecutter.__pkg_name }}.{{ cookiecutter.__class_name }}",
+                "{{ cookiecutter.__pkg_name }}.{{ cookiecutter.__pkg_name }}.{{ cookiecutter.class_name }}",
                 "${file}"
             ],
             "justMyCode": false,

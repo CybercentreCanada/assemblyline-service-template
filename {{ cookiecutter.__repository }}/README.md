@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/github/license/{{ cookiecutter.org_name_full }}/{{ cookiecutter.__repository }})](./LICENSE)
 {% endif -%}
 
-# {{ cookiecutter.__class_name }} Service
+# {{ cookiecutter.class_name }} Service
 
 {{ cookiecutter.short_description }}
 
@@ -31,7 +31,7 @@ This is an Assemblyline service. It is designed to run as part of the Assemblyli
 If you would like to test this service locally, you can run the Docker image directly from the a shell:
 
     docker run \
-        --name {{ cookiecutter.__class_name }} \
+        --name {{ cookiecutter.class_name }} \
         --env SERVICE_API_HOST=http://`ip addr show docker0 | grep "inet " | awk '{print $2}' | cut -f1 -d"/"`:5003 \
         --network=host \
         {{ cookiecutter.org_name_short }}/{{ cookiecutter.__repository }}
@@ -45,7 +45,7 @@ General Assemblyline documentation can be found at: https://cybercentrecanada.gi
 
 {% if cookiecutter.short_description_fr != "" -%}
 
-# Service {{ cookiecutter.__class_name }}
+# Service {{ cookiecutter.class_name }}
 
 {{ cookiecutter.short_description_fr }}
 
@@ -69,7 +69,7 @@ Ce service est spécialement optimisé pour fonctionner dans le cadre d'un dépl
 Si vous souhaitez tester ce service localement, vous pouvez exécuter l'image Docker directement à partir d'un terminal:
 
     docker run \
-        --name {{ cookiecutter.__class_name }} \
+        --name {{ cookiecutter.class_name }} \
         --env SERVICE_API_HOST=http://`ip addr show docker0 | grep "inet " | awk '{print $2}' | cut -f1 -d"/"`:5003 \
         --network=host \
         {{ cookiecutter.org_name_short }}/{{ cookiecutter.__repository }}

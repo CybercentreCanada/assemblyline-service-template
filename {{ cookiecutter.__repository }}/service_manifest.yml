@@ -1,4 +1,4 @@
-name: {{ cookiecutter.__class_name }}
+name: {{ cookiecutter.class_name }}
 version: $SERVICE_TAG
 description: {{ cookiecutter.short_description }}
 
