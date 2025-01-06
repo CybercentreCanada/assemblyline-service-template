@@ -3,7 +3,7 @@
   "__svc_name": "{{ cookiecutter.service_name | replace('assemblyline-service-', '') }}",
   "__repository": "assemblyline-service-{{ cookiecutter.__svc_name }}",
   "__pkg_name": "{{ cookiecutter.service_name | replace('-', '_') }}",
-  "__class_name": "{{ cookiecutter.__pkg_name | replace ('_', ' ') | title | replace(' ', '') }}",
+  "class_name": "{{ cookiecutter.__pkg_name | replace ('_', ' ') | title | replace(' ', '') }}",
   "short_description": "This Assemblyline service is amazing and does amazing things.",
   "short_description_fr": "",
   "stage": ["FILTER", "EXTRACT", "CORE", "SECONDARY", "POST", "REVIEW"],
