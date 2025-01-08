@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "RunServiceOnce",
+            "name": "RunServiceOnce {{ cookiecutter.class_name }}",
             "type": "python",
             "request": "launch",
             "module": "assemblyline_v4_service.dev.run_service_once",
@@ -17,5 +17,20 @@
             ],
             "justMyCode": false,
         },
+        {
+            "name": "[Service] {{ cookiecutter.class_name }} - Privileged",
+            "type": "python",
+            "request": "launch",
+            "module": "assemblyline_v4_service.run_privileged_service",
+            "env": {
+                "SERVICE_MANIFEST_PATH": "service_manifest.yml",
+                "PRIVILEGED": "true",
+                "SERVICE_PATH": "{{ cookiecutter.__pkg_name }}.{{ cookiecutter.__pkg_name }}.{{ cookiecutter.class_name }}",
+                "TASKING_DIR": "/tmp/{{ cookiecutter.class_name }}"
+            },
+            "console": "internalConsole",
+            "cwd": "${workspaceFolder}",
+            "justMyCode": false,
+        }
     ]
 }
