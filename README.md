@@ -1,4 +1,4 @@
-# assemblyline-service-template
+# Assemblyline Service Template
 
 A template repository for Assemblyline 4 services.
 
@@ -56,3 +56,65 @@ cruft update
 ```
 
 You will then need to review any changes before they are applied.
+
+---
+
+# Modèle de service de la ligne d'assemblage
+
+Un référentiel de modèles pour les services Assemblyline 4.
+
+## Utilisation
+
+Installer jq via `sudo apt install jq`
+
+Installer / mettre à jour `cookiecutter` et `cruft` :
+
+``bash
+pip install -Ur requirements.txt
+
+```
+
+Allez dans votre répertoire de développement où vous voulez créer votre service et exécutez :
+
+``bash
+cruft create git@github.com:CybercentreCanada/assemblyline-service-template.git
+# ou
+cruft create https://github.com/CybercentreCanada/assemblyline-service-template.git
+```
+
+## Variables d'entrée
+
+Il vous sera demandé de remplir quelques variables.
+
+|   **Paramètre**   | **Description**                                                                                                                                         |
+| :---------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|   service_name    | Le nom du service que vous créez.                                                                                                                       |
+| short_description | Une courte description d'une ou deux lignes de ce que fait ce service.                                                                                  |
+|       stage       | L'étape d'Assembyline à laquelle ce service doit s'exécuter                                                                                             |
+|     category      | Le type de service que vous créez                                                                                                                       |
+|   org_name_full   | Le nom complet de votre organisation, tel que vous souhaitez qu'il soit affiché dans la licence.                                                        |
+|  org_name_short   | Le nom complet de votre organisation, tel qu'il doit être affiché dans la licence.                                                                      |
+|      licence      | La licence que vous souhaitez utiliser pour ce service. Si `none` est sélectionné, un fichier LICENSE vide sera créé pour que vous puissiez le remplir. |
+
+## Écrire le service
+
+Une fois le projet généré, vous devrez manuellement :
+
+- écrire le service ;
+- Ajouter toute heuristique au `service_manifest.yml` si applicable ;
+
+## Maintenir le service en synchronisation avec le modèle
+
+Pour vérifier si le service n'a pas les dernières modifications du modèle, exécutez :
+
+```bash
+cruft check
+```
+
+Pour mettre à jour, exécutez simplement:
+
+```bash
+cruft update
+```
+
+Vous devrez ensuite vérifier les changements avant qu'ils ne soient appliqués.
