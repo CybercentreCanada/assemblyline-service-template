@@ -59,7 +59,7 @@ You will then need to review any changes before they are applied.
 
 ---
 
-# Modèle de service de la ligne d'assemblage
+# Modèle de service pour Assemblyline 4
 
 Un référentiel de modèles pour les services Assemblyline 4.
 
@@ -93,15 +93,15 @@ Il vous sera demandé de remplir quelques variables.
 |       stage       | L'étape d'Assembyline à laquelle ce service doit s'exécuter                                                                                             |
 |     category      | Le type de service que vous créez                                                                                                                       |
 |   org_name_full   | Le nom complet de votre organisation, tel que vous souhaitez qu'il soit affiché dans la licence.                                                        |
-|  org_name_short   | Le nom complet de votre organisation, tel qu'il doit être affiché dans la licence.                                                                      |
+|  org_name_short   | Une abbréviation du nom de votre organisation (utilisé pour le nom des images docker).                                                                      |
 |      licence      | La licence que vous souhaitez utiliser pour ce service. Si `none` est sélectionné, un fichier LICENSE vide sera créé pour que vous puissiez le remplir. |
 
 ## Écrire le service
 
 Une fois le projet généré, vous devrez manuellement :
 
-- écrire le service ;
-- Ajouter toute heuristique au `service_manifest.yml` si applicable ;
+- Écrire le service ;
+- Ajouter les heuristiques au fichier `service_manifest.yml`, si applicable ;
 
 ## Maintenir le service en synchronisation avec le modèle
 
