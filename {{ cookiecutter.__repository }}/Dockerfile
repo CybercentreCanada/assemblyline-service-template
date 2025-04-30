@@ -2,7 +2,7 @@ ARG branch=latest
 FROM cccs/assemblyline-v4-service-base:$branch
 
 # Python path to the service class from your service directory
-ENV SERVICE_PATH {{ cookiecutter.__pkg_name }}.{{ cookiecutter.__pkg_name }}.{{ cookiecutter.class_name }}
+ENV SERVICE_PATH={{ cookiecutter.__pkg_name }}.{{ cookiecutter.__pkg_name }}.{{ cookiecutter.class_name }}
 
 # Install apt dependencies
 USER root
