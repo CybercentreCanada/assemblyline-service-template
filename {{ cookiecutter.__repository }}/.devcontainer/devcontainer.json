@@ -12,6 +12,9 @@
 		"SHELL": "/bin/bash"
 	},
 	"postCreateCommand": "pip install -r tests/requirements.txt",
+	"runArgs": [
+		"--network=host"
+	],	
 	"customizations": {
 		"vscode": {
 			"extensions": [
