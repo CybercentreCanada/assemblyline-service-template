@@ -27,5 +27,6 @@
     "python.testing.pytestEnabled": true,
     "ruff.configuration": "pyproject.toml",
     "ruff.lint.enable": true,
-    "ruff.lint.preview": true
+    "ruff.lint.preview": true,
+    "flake8.enabled": false
 }
