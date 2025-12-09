@@ -41,7 +41,7 @@ jobs:
           __RESULT_DISABLED="$(sed -ne 's#^\.github/workflows/\(.*\)$#\1#p' <<< "$__RESULT_DISABLED")"
           [ -z "$__RESULT_DISABLED" ] || readarray -t WORKFLOWS_DISABLED <<< "$__RESULT_DISABLED"
 
-          echo "Found ${#WORKFLOWS_ALIVE[@]} active, ${#WORKFLOWS_DEAD[@]} dead, and ${#WORKFLOWS_DISABLED[@]} disabled workflows"
+          {% raw %}echo "Found ${#WORKFLOWS_ALIVE[@]} active, ${#WORKFLOWS_DEAD[@]} dead, and ${#WORKFLOWS_DISABLED[@]} disabled workflows"{% endraw %}
 
           # enable still active workflows
           for WORKFLOW in "${WORKFLOWS_ALIVE[@]}"; do
