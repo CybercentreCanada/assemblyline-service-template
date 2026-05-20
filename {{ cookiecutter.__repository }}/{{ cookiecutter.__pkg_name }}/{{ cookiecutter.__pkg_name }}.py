@@ -11,6 +11,4 @@ class {{ cookiecutter.class_name }}(ServiceBase):
 
     def execute(self, request: ServiceRequest):
         """Run the service."""
-
-        result = Result()
-        request.result = result
+        pass
