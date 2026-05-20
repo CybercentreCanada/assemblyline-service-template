@@ -4,7 +4,7 @@ set -euo pipefail
 docker build \
     --pull \
     --build-arg branch=stable \
-    -t ${PWD##*/}:pytest \
+    -t $(basename "$PWD" | tr '[:upper:]' '[:lower:]'):pytest \
     -f ./Dockerfile \
     .
 
@@ -20,5 +20,5 @@ docker run \
     -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla \
     -v $(pwd)/tests/:/opt/al_service/tests/ \
     $MOUNT_SAMPLES \
-    ${PWD##*/}:pytest \
+    $(basename "$PWD" | tr '[:upper:]' '[:lower:]'):pytest \
     bash -c "pip install -U -r tests/requirements.txt; pytest -p no:cacheprovider --durations=10 -rsx -vv -x"
