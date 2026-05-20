@@ -15,10 +15,10 @@ pip install -Ur requirements.txt
 Go to your development work directory where you want to create your service and run:
 
 ```bash
-cruft create git@github.com:CybercentreCanada/assemblyline-service-template.git
-# or
 cruft create https://github.com/CybercentreCanada/assemblyline-service-template.git
 ```
+
+It could also be done using ssh, but the automatic github actions will be failing.
 
 ## Input variables
 

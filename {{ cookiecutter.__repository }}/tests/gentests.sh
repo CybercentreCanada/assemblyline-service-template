@@ -4,7 +4,7 @@ set -euo pipefail
 docker build \
     --pull \
     --build-arg branch=stable \
-    -t ${PWD##*/}:gentests \
+    -t $(basename "$PWD" | tr '[:upper:]' '[:lower:]'):gentests \
     -f ./Dockerfile \
     .
 
@@ -20,5 +20,5 @@ docker run \
     -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla \
     -v $(pwd)/tests/:/opt/al_service/tests/ \
     $MOUNT_SAMPLES \
-    ${PWD##*/}:gentests \
+    $(basename "$PWD" | tr '[:upper:]' '[:lower:]'):gentests \
     bash -c "pip install -r tests/requirements.txt; python /opt/al_service/tests/gentests.py"
