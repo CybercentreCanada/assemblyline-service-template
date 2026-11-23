@@ -14,7 +14,7 @@
 ## Image variants and tags
 
 Assemblyline services are built from the [Assemblyline service base image](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
-which is based on Debian 11 with Python 3.11.
+which is based on Debian 13 with Python 3.14.
 
 Assemblyline services use the following tag definitions:
 
@@ -22,7 +22,7 @@ Assemblyline services use the following tag definitions:
 | :----------: | :----------------------------------------------------------------------------------------------- | :------------------------: |
 |    latest    | The most recent build (can be unstable).                                                         |          `latest`          |
 |  build_type  | The type of build used. `dev` is the latest unstable build. `stable` is the latest stable build. |     `stable` or `dev`      |
-|    series    | Complete build details, including version and build type: `version.buildType`.                   | `4.5.stable`, `4.5.1.dev3` |
+|    series    | Complete build details, including version and build type: `version.buildType`.                   | `4.8.stable`, `4.8.1.dev0` |
 
 ## Running this service
 
@@ -52,7 +52,7 @@ General Assemblyline documentation can be found at: https://cybercentrecanada.gi
 ## Variantes et étiquettes d'image
 
 Les services d'Assemblyline sont construits à partir de l'image de base [Assemblyline service](https://hub.docker.com/r/cccs/assemblyline-v4-service-base),
-qui est basée sur Debian 11 avec Python 3.11.
+qui est basée sur Debian 13 avec Python 3.14.
 
 Les services d'Assemblyline utilisent les définitions d'étiquettes suivantes:
 
@@ -60,7 +60,7 @@ Les services d'Assemblyline utilisent les définitions d'étiquettes suivantes:
 | :------------------: | :------------------------------------------------------------------------------------------------------------- | :------------------------: |
 |   dernière version   | La version la plus récente (peut être instable).                                                               |          `latest`          |
 |      build_type      | Type de construction utilisé. `dev` est la dernière version instable. `stable` est la dernière version stable. |     `stable` ou `dev`      |
-|        série         | Détails de construction complets, comprenant la version et le type de build: `version.buildType`.              | `4.5.stable`, `4.5.1.dev3` |
+|        série         | Détails de construction complets, comprenant la version et le type de build: `version.buildType`.              | `4.8.stable`, `4.8.1.dev0` |
 
 ## Exécution de ce service
 
