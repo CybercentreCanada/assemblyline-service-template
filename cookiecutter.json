@@ -41,5 +41,5 @@
       "none": "No license, I will add my own"
     }
   },
-  "_extensions": ["local_extensions.github_maintainer.Ext"]
+  "_extensions": ["local_extensions.maintainer.Ext"]
 }
