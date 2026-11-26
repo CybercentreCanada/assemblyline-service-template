@@ -17,7 +17,6 @@ docker run \
     --rm \
     -e FULL_SELF_LOCATION=/opt/al_service \
     $ENV_SAMPLES \
-    -v /usr/share/ca-certificates/mozilla:/usr/share/ca-certificates/mozilla \
     -v $(pwd)/tests/:/opt/al_service/tests/ \
     $MOUNT_SAMPLES \
     $(basename "$PWD" | tr '[:upper:]' '[:lower:]'):gentests \
